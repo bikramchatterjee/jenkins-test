@@ -11,16 +11,16 @@ pipeline {
         stage('Setup Python') {
             steps {
                 script {
-                    sh 'python3 -m venv venv'
-                    sh 'source venv/bin/activate'
-                    sh 'pip install -r requirements.txt || true'
+                    bat 'python3 -m venv venv'
+                    bat 'source venv/bin/activate'
+                    bat 'pip install -r requirements.txt || true'
                 }
             }
         }
 
         stage('Run Python App') {
             steps {
-                sh 'python app.py'
+                bat 'python app.py'
             }
         }
     }
