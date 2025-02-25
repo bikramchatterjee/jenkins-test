@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     bat 'python -m venv venv'
-                    bat 'source venv/bin/activate'
+                    bat 'venv\\Scripts\\activate'
                     bat 'pip install -r requirements.txt || true'
                 }
             }
